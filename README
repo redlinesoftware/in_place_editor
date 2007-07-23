@@ -3,9 +3,9 @@ InPlaceEditor
 
 v0.9
 
-An improved InPlaceEditor plugin than that provided in rails.
+An improved in_place_editor method than that provided in rails.
 
-This plugin is drop-in compatible with the current/old in_place_editor method, but adds the ability to specify any option that the JS control accepts.
+This plugin is drop-in compatible with the current/old in_place_editor method, but adds the ability to specify any option that the Ajax.InPlaceEditor control accepts.
 
 The current rails version is missing a lot of valid options for the control, but this plugin will accept any current and new parameters for the control.
 
