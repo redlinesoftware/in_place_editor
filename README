@@ -18,7 +18,8 @@ eg. :on_failure -> onFailure, :rows -> rows, :highlight_color -> highlightColor
 * note
 highlightColor is the name of the option in the new rewritten version of the control, highlightcolor (no capital C) is used in the version 1.7 of scriptaculous and previous versions.
 
-Some options require quoting to be valid in the JS, such as :highlight_color.  The 2 options to specify the option are...
+Some options require quoting to be valid in the JS, such as :highlight_color.  The 2 ways to specify the option are...
+
 1) Manually quote the option 
 :highlight_color => "'#000000'"
 
