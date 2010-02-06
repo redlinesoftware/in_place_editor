@@ -1,4 +1,4 @@
-module ActionView::Helpers::JavaScriptMacrosHelper
+module InPlaceMacrosHelper
   def in_place_editor(field_id, options = {})
     options.reverse_merge! :quoted => {}
 

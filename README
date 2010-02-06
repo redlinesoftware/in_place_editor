@@ -1,6 +1,10 @@
 InPlaceEditor
 =============
 
+v0.9.1
+
+Move override to the InPlaceMacrosHelper module to work with the latest version of the in_place_editing plugin.
+
 v0.9
 
 An improved in_place_editor method than that provided in rails.
