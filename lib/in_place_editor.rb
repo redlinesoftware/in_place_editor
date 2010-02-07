@@ -7,12 +7,17 @@ module InPlaceMacrosHelper
     function << "'#{url_for(options.delete(:url))}'"
 
     # translate old keys to new ones 
-    {:ok_text => :save_text, :ajax_options => :option, :eval_scripts => :script}.each do |new_key, old_key|
+    {:ok_text => :save_text, :ajax_options => :options}.each do |new_key, old_key|
       option = options.delete(old_key)
       options[new_key] = option if option
     end
 
     js_options = {}
+
+    if protect_against_forgery?
+      options[:with] ||= "Form.serialize(form)"
+      options[:with] += " + '&authenticity_token=' + encodeURIComponent('#{form_authenticity_token}')"
+    end
 
     # old custom options
     option = options.delete(:load_text_url)
@@ -32,7 +37,7 @@ module InPlaceMacrosHelper
     # add the rest of the options (unquoted... as is)
     options.each do |key, value|
       option = options.delete(key)
-      js_options[key.to_s.camelize(:lower)] = option if option
+      js_options[key.to_s.camelize(:lower)] = option unless option.nil?
     end
 
     function << (', ' + options_for_javascript(js_options)) unless js_options.empty?

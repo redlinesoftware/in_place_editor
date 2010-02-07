@@ -1,7 +1,11 @@
 InPlaceEditor
 =============
 
-v0.9.1
+v0.9.2 - Feb. 6, 2010
+
+Additonal updates to work with latest version of official plugin.
+
+v0.9.1 - Feb. 5, 2010
 
 Move override to the InPlaceMacrosHelper module to work with the latest version of the in_place_editing plugin.
 
